@@ -1,0 +1,143 @@
+<?php 
+include "config.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Trugeny Page Card Display</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+<style>
+.button4 {
+  border-color: #4169E1;  
+}
+.button {
+  background-color: white; /* Green */
+  border: 2px solid #4169E1;
+  color: #4169E1 ;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<h4 style="position:relative;text-align:center;font-size:40px;color:#4169E1;right:111px">Order your truGeny Test Kit</h4>
+<div style="position:relative;right:-170px">
+<img src="assets/biology.png" style="position:relative;width:81px;text-align:center;font-size:30px;color:#4169E1">&nbsp;&nbsp;Understand your genes and evaluate your risk for cancer and cardiac conditions.
+  </div>
+  <br>
+  <!-- Navigation -->
+ <body>
+<h4 style="position:relative;text-align:center;font-size:30px;right:75px;font-weight:bold">truGeny brings you a new kind of DNA TEST</h4>
+<p style="position:relative;text-align:center;font-size:20px;right:85px">Discover insights from your DNA. Take actions for a healthier and longer life.</p>
+  <h4 style="position:relative;text-align:center;font-size:20px;color:#4169E1;right:111px">Be PROACTIVE</h4>
+  <br>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+
+      
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="assets/cancer.png" style="position:relative;width:220px;margin-left:16px;margin-top:10px;height:172px;margin-right:16px" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+				<?php
+$emp_query2 = "SELECT * FROM toolkit WHERE ID='1'";
+$emp_query3 = mysqli_query($con,$emp_query2);
+$rowcount=mysqli_num_rows($emp_query3);
+       if($rowcount > 0){
+          
+          while($emp_query6 = mysqli_fetch_assoc($emp_query3)){
+			  $planname=$emp_query6['Planname'];
+			  $amount=$emp_query6['Amount'];
+		  }
+	   }
+	   echo $planname;
+	   echo "<br> Rs ".$amount." /-";
+	   ?>
+                  <h1 style="position:relative;text-align:center;font-size:30px">TruFind</h1>
+				  <!--<h1 style="position:relative;text-align:center;font-size:16px">Hereditary Cancer Test</h1> -->
+                </h4>
+               <!-- <h5 style="position:relative;text-align:center;color:#4169E1">&#8377; 0.00/-</h5> -->
+				
+                <p class="card-text" style="position:relative;font-size:11px">A detailed analysis of over 90 genes your genes to help you learn your risks for developing cancers of the breast, ovarian, uterine, colorectal, prostrate, pancreatic and stomach cancers.</p>
+              <button class="button button4">ORDER NOW &#8594;</button>
+			  </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="assets/carrierscreeningtest.png" style="position:relative;width:220px;margin-left:16px;margin-top:10px;height:172px;margin-right:16px" alt=""></a>
+              <div class="card-body" style="position:relative;bottom:-44px">
+                <h4 class="card-title">
+				  <h1 style="position:relative;text-align:center;font-size:16px">Carrier Screening Test</h1>
+                </h4>
+                <h5 style="position:relative;text-align:center;color:#4169E1">&#8377; 0.00/-</h5>
+                <p class="card-text" style="position:relative;font-size:11px">Planning for your future family’s health matters. Knowledge about your risk Of passing on a genetic condition to your Child can make a difference to the well being of your future children.</p>
+              <button class="button button4">ORDER NOW &#8594;</button>
+			  </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="assets/coroneryarterytest.png" style="position:relative;width:220px;margin-left:16px;margin-top:10px;height:172px;margin-right:16px" alt=""></a>
+              <div class="card-body" style="position:relative;bottom:-44px">
+                <h4 class="card-title">
+                 
+				  <h1 style="position:relative;font-size:16px">Coronary Artery Disease Test</h1>
+                </h4>
+                <h5 style="position:relative;text-align:center;color:#4169E1">&#8377; 0.00/-</h5>
+                <p class="card-text" style="position:relative;font-size:11px">A next generation Polygenic Risk Score (PRS) based genetic test to you help you evaluate your risks for developing heart conditions such as familial Hypercholestrolemia, cardiomyopathy, Arrythmia.</p>
+              <button class="button button4">ORDER NOW &#8594;</button>
+			  </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
